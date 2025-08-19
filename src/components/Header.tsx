@@ -7,7 +7,8 @@ import TextPlugin from "gsap/TextPlugin";
 const Header: React.FC = () => {
   const Titleref = useRef<HTMLDivElement | null>(null);
   const Listref = useRef<HTMLUListElement | null>(null);
-  const headingref = useRef<HTMLHeadingElement | null>(null);
+  const headingLine1 = useRef<HTMLHeadingElement | null>(null);
+  const headingLine2 = useRef<HTMLHeadingElement | null>(null);
   const subheadingref = useRef<HTMLHeadingElement | null>(null);
 
   gsap.registerPlugin(TextPlugin);
@@ -36,11 +37,20 @@ const Header: React.FC = () => {
         });
       }
 
-      if (headingref.current) {
-        gsap.to(headingref.current, {
-          duration: 0.5,
+      if (headingLine1.current) {
+        gsap.to(headingLine1.current, {
+          duration: 0.6,
           ease: "none",
-          text: "IDEA TO EXECUTION",
+          text: "IDEA TO",
+        });
+      }
+
+      if (headingLine2.current) {
+        gsap.to(headingLine2.current, {
+          duration: 0.6,
+          delay: 0.6,
+          ease: "none",
+          text: "EXECUTION",
         });
       }
 
@@ -58,7 +68,8 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <div className="hero">
+      <div className="hero h-screen w-full flex flex-col justify-between 
+      bg-[url('/images/bg-2.png')] bg-cover bg-center bg-no-repeat">
         <div className="page1 sticky top-0 z-50">
           <div
             className="flex justify-between max-sm:px-5 font-semibold px-20 py-4"
@@ -67,7 +78,7 @@ const Header: React.FC = () => {
             <div ref={Titleref} className="flex">
               <a href="index.html">
                 <h1 className="title text-[#E4E4E4] text-xl max-sm:text-lg">
-                  _VK
+                  _VK_
                 </h1>
               </a>
             </div>
@@ -81,20 +92,26 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className="hero-content flex pl-20 max-sm:pl-5 mt-36 font-bold text-center relative text-white">
+        <div className="hero-content flex flex-col pl-20 max-sm:pl-5 flex-1 justify-center relative text-white font-bold">
           <h1
-            ref={headingref}
-            className="text-9xl cursor-default text-start max-sm:text-[12vw]"
-          >
-            DSIING OT DEVDPLEMEWT
-          </h1>
+          ref={headingLine1}
+          className="text-9xl cursor-default text-start max-sm:text-[12vw]"
+        >
+          DSIING OT
+        </h1>
+        <h1
+          ref={headingLine2}
+          className="text-9xl cursor-default text-start max-sm:text-[12vw]"
+        >
+          DEVDPLEMEWT
+        </h1>
         </div>
         <div className="hero-bottom text-white font-semibold pl-20 max-sm:pl-5 mt-10">
           <h3 ref={subheadingref} className="text-xl max-sm:text-[5vw]">
             LOREM IPSUM DOLOR
           </h3>
         </div>
-        <div className="flex justify-between px-20 max-sm:px-4 pb-16 font-semibold max-sm:font-bold text-white text-sm">
+        <div className="flex justify-between px-20 max-sm:px-4 pb-16 font-normal max-sm:font-normal text-white text-sm">
           <h3 className="mt-8 max-sm:mt-56">Frontend</h3>
           <h3 className="mt-8 max-sm:mt-56">Backend</h3>
           <h3 className="mt-8 max-sm:mt-56">Beyond</h3>

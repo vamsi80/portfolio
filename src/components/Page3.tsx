@@ -6,6 +6,11 @@ import { bgimages } from "../types/images"; // ✅ importing from your types fil
 const Page3: FC = () => {
   return (
     <div className="h-full w-full">
+      <div className="sticky top-0 z-40 h-[40vh] w-full flex items-center justify-center bg-[#1B1B1B]">
+        <h3 className="text-center bg-[#1B1B1B] pb-10 text-[#f4f4f4] font-bold mt-0 text-9xl max-sm:text-[12vw]">
+          WORKS
+        </h3>
+      </div>
       {bgimages.map((bgimage) => (
         <div key={bgimage.id} className="sticky top-0 z-50 h-full w-full">
           {/* Background Image */}
