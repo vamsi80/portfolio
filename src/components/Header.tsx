@@ -94,17 +94,17 @@ const Header: React.FC = () => {
 
         <div className="hero-content flex flex-col pl-20 max-sm:pl-5 flex-1 justify-center relative text-white font-bold">
           <h1
-          ref={headingLine1}
-          className="text-9xl cursor-default text-start max-sm:text-[12vw]"
-        >
-          DSIING OT
-        </h1>
-        <h1
-          ref={headingLine2}
-          className="text-9xl cursor-default text-start max-sm:text-[12vw]"
-        >
-          DEVDPLEMEWT
-        </h1>
+            ref={headingLine1}
+            className="text-9xl cursor-default text-start max-sm:text-[12vw]"
+          >
+            DSIING OT
+          </h1>
+          <h1
+            ref={headingLine2}
+            className="text-9xl cursor-default text-start max-sm:text-[12vw]"
+          >
+            DEVDPLEMEWT
+          </h1>
         </div>
         <div className="hero-bottom text-white font-semibold pl-20 max-sm:pl-5 mt-10">
           <h3 ref={subheadingref} className="text-xl max-sm:text-[5vw]">

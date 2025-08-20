@@ -2,6 +2,7 @@
 
 import React, { FC, useEffect } from "react";
 import gsap from "gsap";
+import Skils from "./skils";
 
 const Page4: FC = () => {
   useEffect(() => {
@@ -25,15 +26,7 @@ const Page4: FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#F8F8F8] h-full w-full text-black">
-      <div className="flex pt-10 items-center justify-center">
-        <button
-          type="button"
-          className="border border-black hover:bg-black hover:text-white transition rounded-full p-4 w-48"
-        >
-          ・view all works
-        </button>
-      </div>
+    <div className="bg-[#F4F4F4] h-full w-full text-black">
 
       <div id="page2" className="flex justify-center items-center shadow-lg">
         <div

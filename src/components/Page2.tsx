@@ -3,8 +3,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { TextParticle } from "./ui/TextParticle";
-import GlitchText from "./ui/Glitch-Text";
 
 const Page2: FC = () => {
     const [fontSize, setFontSize] = useState(60);

@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis"; // ✅ Make sure you installed it
 import Page4 from "@/components/Page4";
+import Skils from "@/components/skils";
 
 const App: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -87,6 +88,7 @@ const App: FC = () => {
       <Header />
       <Page2 />
       <Page3 />
+      <Skils />
       <Page4 />
       <Footer />
     </>
