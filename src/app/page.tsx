@@ -89,7 +89,7 @@ const App: FC = () => {
       <Page2 />
       <Page3 />
       <Skils />
-      <Page4 />
+      {/* <Page4 /> */}
       <Footer />
     </>
   );

@@ -43,15 +43,9 @@ const Page2: FC = () => {
                 </p>
 
                 <div className="pt-14 group">
-                    {/* <p className="hidden top-[72rem] max-sm:group-hover:hidden group-hover:block absolute text-center text-blue-500 cursor-pointer font-semibold left-0 right-20 text-sm max-sm:text-xs max-sm:text-start max-sm:pl-12 max-sm:font-bold">
-                        Learn about him
-                    </p> */}
                     <p className="text-center cursor-pointer font-semibold text-sm max-sm:text-xs max-sm:text-start max-sm:pl-12 max-sm:font-bold pb-20">
                         Know about him
                     </p>
-                    {/* <p className="hidden max-sm:group-hover:hidden group-hover:block absolute text-center text-pink-600 cursor-pointer font-semibold left-20 right-0 text-sm max-sm:text-xs max-sm:text-start max-sm:pl-12 max-sm:font-bold">
-                        Learn about him
-                    </p> */}
                 </div>
             </div>
         </>

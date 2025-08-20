@@ -39,7 +39,13 @@ const Page3: FC = () => {
           text={["WORKS"]}
           speed={80}
           loop={false}
-          className="text-9xl font-medium"
+          className="
+            text-3xl           /* base → mobile */
+            sm:text-4xl        /* small screens */
+            md:text-6xl        /* medium screens */
+            lg:text-7xl        /* large screens */
+            font-semibold
+          "
         />
       </div>
 
@@ -59,17 +65,22 @@ const Page3: FC = () => {
             </h3>
           </div>
 
-          <div className="absolute bottom-80 right-36 max-sm:bottom-5 max-sm:right-5 z-50 text-white">
-            <h2 className="text-xl max-sm:text-sm font-bold">
+          <div className="absolute bottom-80 right-36 
+                sm:bottom-20 sm:right-10 
+                md:bottom-12 md:right-12
+                max-sm:bottom-5 max-sm:right-5 
+                z-50 text-white">
+            <h2 className="text-xl sm:text-lg md:text-xl max-sm:text-sm font-bold">
               {bgimage.project}
             </h2>
-            <h4 className="text-[1rem] max-sm:text-xs font-semibold">
+            <h4 className="text-[1rem] sm:text-sm md:text-base max-sm:text-xs font-semibold">
               {bgimage.description}
             </h4>
-            <h5 className="text-[1rem] pt-5 cursor-pointer max-sm:text-xs font-semibold">
+            <h5 className="text-[1rem] sm:text-sm md:text-base pt-5 cursor-pointer max-sm:text-xs font-semibold">
               View More
             </h5>
           </div>
+
 
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="relative w-[35vw] h-[31vw] max-sm:w-[91vw] bottom-12 max-sm:h-[101vw] max-sm:pt-12 cursor-pointer shadow-lg hover:scale-105 transition-all ease-in-out duration-300">

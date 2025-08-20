@@ -2,7 +2,6 @@
 
 import React, { FC, useEffect } from "react";
 import gsap from "gsap";
-import Skils from "./skils";
 
 const Page4: FC = () => {
   useEffect(() => {
