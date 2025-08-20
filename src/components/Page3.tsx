@@ -1,10 +1,11 @@
 "use client";
 
 import React, { FC, useEffect, useRef } from "react";
-import { bgimages } from "../types/images";
+import { bgimages } from "../types/types";
 import { gsap } from "gsap";
 import TextPlugin from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Typewriter } from "./ui/Typewriter";
 
 const Page3: FC = () => {
   const headingLine1 = useRef<HTMLHeadingElement | null>(null);
@@ -34,12 +35,12 @@ const Page3: FC = () => {
     <div className="h-full w-full">
       {/* Works Title */}
       <div className="sticky top-0 z-40 h-[40vh] w-full flex flex-col items-center justify-center bg-[#1B1B1B] text-white">
-        <h1
-          ref={headingLine1}
-          className="text-9xl cursor-default text-center max-sm:text-[12vw] font-bold"
-        >
-          well
-        </h1>
+        <Typewriter
+          text={["WORKS"]}
+          speed={80}
+          loop={false}
+          className="text-9xl font-medium"
+        />
       </div>
 
       {bgimages.map((bgimage) => (
@@ -82,16 +83,6 @@ const Page3: FC = () => {
           </div>
         </div>
       ))}
-
-      {/* View All Works */}
-      <div className="flex pt-10 items-center justify-center">
-        <button
-          type="button"
-          className="border border-black hover:bg-black hover:text-white transition rounded-full p-4 w-48"
-        >
-          ・view all works
-        </button>
-      </div>
     </div>
   );
 };

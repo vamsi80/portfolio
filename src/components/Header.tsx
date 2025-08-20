@@ -92,20 +92,21 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className="hero-content flex flex-col pl-20 max-sm:pl-5 flex-1 justify-center relative text-white font-bold">
+        <div className="hero-content flex flex-col pl-5 sm:pl-20 lg:pl-20 flex-1 justify-center relative text-white font-bold">
           <h1
             ref={headingLine1}
-            className="text-9xl cursor-default text-start max-sm:text-[12vw]"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl cursor-default text-start"
           >
             DSIING OT
           </h1>
           <h1
             ref={headingLine2}
-            className="text-9xl cursor-default text-start max-sm:text-[12vw]"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl cursor-default text-start"
           >
             DEVDPLEMEWT
           </h1>
         </div>
+
         <div className="hero-bottom text-white font-semibold pl-20 max-sm:pl-5 mt-10">
           <h3 ref={subheadingref} className="text-xl max-sm:text-[5vw]">
             LOREM IPSUM DOLOR
