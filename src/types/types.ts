@@ -62,3 +62,41 @@ export const skilsText: skilsText[] = [
     keywords: ["Illustrator", "Figma", "BrightSign"],
   },
 ];
+
+// types/workItems.ts
+export interface WorkItem {
+  id: number;
+  leftImage: string;
+  rightImage: string;
+  title: string;
+  client: string;
+  detailLink?: string;
+}
+
+export const workItems: WorkItem[] = [
+  {
+    id: 1,
+    leftImage: "/images/bg-1.png",
+    rightImage: "/images/bg-1.png",
+    title: "Brand Site",
+    client: "01 FURYU Brand Site",
+    detailLink: "/works/furyu",
+  },
+  {
+    id: 2,
+    leftImage: "/images/bg-1.png",
+    rightImage: "/images/bg-1.png",
+    title: "Brand Site",
+    client: "02 Another Client",
+    detailLink: "/works/another",
+  },
+  {
+    id: 3,
+    leftImage: "/images/bg-1.png",
+    rightImage: "/images/bg-1.png",
+    title: "Brand Site",
+    client: "03 Third Client",
+    detailLink: "/works/third",
+  },
+];
+

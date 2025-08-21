@@ -1,20 +1,24 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
-  const Titleref = useRef<HTMLDivElement | null>(null);
-  const Listref = useRef<HTMLUListElement | null>(null);
+  const titleRef = useRef<HTMLDivElement | null>(null);
+  const listRef = useRef<HTMLUListElement | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const tl = gsap.timeline();
+  // ✅ Decide text color based on route (memoized)
+  const isDark = useMemo(() => pathname === "/works", [pathname]);
+
+  // ✅ Run GSAP on mount
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      if (Titleref.current) {
-        tl.from(Titleref.current, {
+      if (titleRef.current) {
+        gsap.from(titleRef.current, {
           duration: 1,
           y: -10,
           opacity: 0,
@@ -23,8 +27,8 @@ const Header: React.FC = () => {
         });
       }
 
-      if (Listref.current) {
-        gsap.from(Listref.current.querySelectorAll("li"), {
+      if (listRef.current) {
+        gsap.from(listRef.current.querySelectorAll("li"), {
           duration: 1,
           opacity: 0,
           filter: "blur(10px)",
@@ -35,31 +39,47 @@ const Header: React.FC = () => {
       }
     });
 
-    return () => ctx.revert();
+    return () => ctx.revert(); // ✅ Cleanup GSAP
   }, []);
 
   return (
     <header className="fixed top-0 left-0 w-full z-[9999] bg-transparent">
-      <div className="flex justify-between max-sm:px-5 font-semibold px-20 py-4">
-        <div ref={Titleref} className="flex">
-          <Link href="/">
-            <h1 className="title text-[#E4E4E4] text-xl max-sm:text-lg">_VK_</h1>
+      <div className="flex justify-between items-center max-sm:px-5 px-20 py-4 font-semibold">
+        {/* Logo / Title */}
+        <div ref={titleRef} className="flex">
+          <Link href="/" aria-label="Go to home">
+            <h1
+              className={`title text-xl max-sm:text-lg transition-colors duration-500 ${
+                isDark ? "text-black" : "text-[#f4f4f4]"
+              }`}
+            >
+              _VK_
+            </h1>
           </Link>
         </div>
-        <ul ref={Listref} className="list flex gap-10 text-lg mt-1 max-sm:text-sm text-[#E4E4E4]">
-          <li
-            className="cursor-pointer"
-            onClick={() => router.push("/works")}
+
+        {/* Navigation */}
+        <nav aria-label="Main Navigation">
+          <ul
+            ref={listRef}
+            className={`flex gap-10 text-lg max-sm:text-sm transition-colors duration-500 ${
+              isDark ? "text-black" : "text-[#f4f4f4]"
+            }`}
           >
-            WORKS
-          </li>
-          <li
-            className="cursor-pointer"
-            onClick={() => router.push("/about")}
-          >
-            ABOUT
-          </li>
-        </ul>
+            <li
+              className="cursor-pointer hover:underline underline-offset-4"
+              onClick={() => router.push("/works")}
+            >
+              WORKS
+            </li>
+            <li
+              className="cursor-pointer hover:underline underline-offset-4"
+              onClick={() => router.push("/about")}
+            >
+              ABOUT
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

@@ -1,12 +1,25 @@
-// app/works/page.tsx
-"use client"; // only if you need client-side stuff (hooks, events etc.)
+"use client";
 
+import Headding from "@/components/works/heading";
+import WorkItem from "@/components/works/WorkItem";
+import { workItems } from "@/types/types";
 import React from "react";
 
 export default function WorksPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white">
-      <h1 className="text-4xl font-bold">My Works</h1>
+    <div className="flex flex-col items-center justify-center">
+      <Headding />
+
+      {workItems.map((item) => (
+        <WorkItem
+          key={item.id}
+          leftImage={item.leftImage}
+          rightImage={item.rightImage}
+          title={item.title}
+          client={item.client}
+          detailLink={item.detailLink}
+        />
+      ))}
     </div>
   );
 }
