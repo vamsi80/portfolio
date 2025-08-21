@@ -144,16 +144,18 @@
 }
 
 .glitch::before {
-  left: -5px;
-  text-shadow: 50px 0 rgba(255, 0, 0, 0.7);
+  left: -2px;
+  text-shadow: 4px 0 rgba(255, 0, 0, 0.7);
+  animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse;
 }
 
 .glitch::after {
-  left: 10px;
-  text-shadow: -10px 0 rgba(0, 0, 255, 0.7);
+  left: 2px;
+  text-shadow: -4px 0 rgba(0, 0, 255, 0.7);
+  animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse;
 }
 
-.glitch:hover::before {
+/* .glitch:hover::before {
   text-shadow: 4px 0 rgba(255, 0, 0, 0.7);
   animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse;
 }
@@ -161,14 +163,14 @@
 .glitch:hover::after {
   text-shadow: -5px 0 rgba(0, 0, 255, 0.7);
   animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse;
-}
+} */
 
 @keyframes glitch-loop-1 {
   0% { clip: rect(36px, 9999px, 9px, 0) }
   25% { clip: rect(25px, 9999px, 99px, 0) }
-  50% { clip: rect(50px, 9999px, 102px, 0) }
+  /* 50% { clip: rect(50px, 9999px, 102px, 0) }
   75% { clip: rect(30px, 9999px, 92px, 0) }
-  100% { clip: rect(91px, 9999px, 98px, 0) }
+  100% { clip: rect(91px, 9999px, 98px, 0) } */
 }
 
 @keyframes glitch-loop-2 {

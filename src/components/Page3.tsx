@@ -43,7 +43,7 @@ const Page3: FC = () => {
             text-3xl           /* base → mobile */
             sm:text-4xl        /* small screens */
             md:text-6xl        /* medium screens */
-            lg:text-7xl        /* large screens */
+            lg:text-9xl        /* large screens */
             font-semibold
           "
         />
