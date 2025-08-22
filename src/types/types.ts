@@ -63,7 +63,92 @@ export const skilsText: skilsText[] = [
   },
 ];
 
-// types/workItems.ts
+export interface ImplementationDetail {
+  title: string;
+  points: string[];
+}
+
+export interface CaseDetail {
+  id: string;
+  caseNumber: string;
+  isFictional?: boolean;
+  title: string;
+  launchUrl: string;
+  areaOfResponsibility: string;
+  development: string;
+  overview: string;
+  productionPeriod: string;
+  implementationDetails: ImplementationDetail[];
+  images: string[];
+}
+
+export const caseDetails: CaseDetail[] = [
+  {
+    id: "green-energy",
+    caseNumber: "# case_03",
+    isFictional: true,
+    title: "Green Energy",
+    launchUrl: "https://example.com",
+    areaOfResponsibility: "Design/Implementation",
+    development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
+    overview:
+    "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
+    productionPeriod: "2 months",
+    implementationDetails: [
+      {
+        title: "Implementation details 1",
+        points: ["WORKS", "ABOUT"],
+      },
+      {
+        title: "Implementation details 2",
+        points: ["WORKS", "ABOUT"],
+      },
+      {
+        title: "Implementation details 3",
+        points: ["WORKS", "ABOUT"],
+      },
+    ],
+    images: [
+      "/images/bg-1.png",
+      "/images/bg-1.png",
+      "/images/bg-1.png",
+      "/images/bg-1.png",
+    ],
+  },
+  {
+    id: "lattice-lane",
+    caseNumber: "# case_03",
+    isFictional: true,
+    title: "lattice lane",
+    launchUrl: "https://example.com",
+    areaOfResponsibility: "Design/Implementation",
+    development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
+    overview:
+    "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
+    productionPeriod: "2 months",
+    implementationDetails: [
+      {
+        title: "Implementation details 1",
+        points: ["WORKS", "ABOUT"],
+      },
+      {
+        title: "Implementation details 2",
+        points: ["WORKS", "ABOUT"],
+      },
+      {
+        title: "Implementation details 3",
+        points: ["WORKS", "ABOUT"],
+      },
+    ],
+    images: [
+      "/images/bg-1.png",
+      "/images/bg-1.png",
+      "/images/bg-1.png",
+      "/images/bg-1.png",
+    ],
+  },
+];
+
 export interface WorkItem {
   id: number;
   leftImage: string;
@@ -73,30 +158,11 @@ export interface WorkItem {
   detailLink?: string;
 }
 
-export const workItems: WorkItem[] = [
-  {
-    id: 1,
-    leftImage: "/images/bg-1.png",
-    rightImage: "/images/bg-1.png",
-    title: "Brand Site",
-    client: "01 FURYU Brand Site",
-    detailLink: "/works/furyu",
-  },
-  {
-    id: 2,
-    leftImage: "/images/bg-1.png",
-    rightImage: "/images/bg-1.png",
-    title: "Brand Site",
-    client: "02 Another Client",
-    detailLink: "/works/another",
-  },
-  {
-    id: 3,
-    leftImage: "/images/bg-1.png",
-    rightImage: "/images/bg-1.png",
-    title: "Brand Site",
-    client: "03 Third Client",
-    detailLink: "/works/third",
-  },
-];
-
+export const workItems: WorkItem[] = caseDetails.map((c, index) => ({
+  id: index + 1,
+  leftImage: "/images/bg-1.png",
+  rightImage: "/images/bg-1.png",
+  title: c.title,
+  client: `${c.caseNumber} ${c.title}`,
+  detailLink: `/works/${c.id}`,
+}));

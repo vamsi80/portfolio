@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 interface WorkItemProps {
+  id: number | string;
   leftImage: string;
   rightImage: string;
   title: string;
@@ -12,6 +13,7 @@ interface WorkItemProps {
 }
 
 const WorkItem: React.FC<WorkItemProps> = ({
+  id,
   leftImage,
   rightImage,
   title,
@@ -19,7 +21,9 @@ const WorkItem: React.FC<WorkItemProps> = ({
   detailLink = "#",
 }) => {
   return (
-    <div className="relative w-full bg-[#f4f4f4] flex flex-col justify-start items-start overflow-hidden px-20 pb-50">
+    <div
+    id={`work-${id}`}
+     className="relative w-full bg-[#f4f4f4] flex flex-col justify-start items-start overflow-hidden px-20 pb-50">
       <div className="absolute inset-0 flex items-start overflow-hidden z-0">
         <h1
           className="scroll-text whitespace-nowrap text-[10rem] md:text-[14rem] font-light text-gray-400 opacity-30 transition-opacity duration-500"

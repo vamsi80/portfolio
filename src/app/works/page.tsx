@@ -13,6 +13,7 @@ export default function WorksPage() {
       {workItems.map((item) => (
         <WorkItem
           key={item.id}
+          id={item.id}
           leftImage={item.leftImage}
           rightImage={item.rightImage}
           title={item.title}
