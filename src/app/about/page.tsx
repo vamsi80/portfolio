@@ -1,10 +1,16 @@
-// app/about/page.tsx
+"use client";
+
+import AboutHeadding from "@/components/aboutus/Aboutheading";
+import Aboutpage from "@/components/aboutus/Aboutpage";
 import React from "react";
 
-export default function AboutPage() {
+export default function WorksPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white" data-theme="dark">
-      <h1 className="text-4xl font-bold">About Me</h1>
+    <div className="flex flex-col items-center justify-center"
+      data-theme="light"
+    >
+      <AboutHeadding />
+      <Aboutpage />
     </div>
   );
 }
