@@ -34,7 +34,6 @@ export const bgimages: BgImage[] = [
   },
 ];
 
-
 export interface skilsText {
   id: number;
   title: string;

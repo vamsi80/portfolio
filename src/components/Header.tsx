@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const pathname = usePathname();
 
   // ✅ Decide text color based on route (memoized)
-  const isDark = useMemo(() => pathname === "/works", [pathname]);
+  const isDark = useMemo(() => pathname === "/", [pathname]);
 
   // ✅ Run GSAP on mount
   useLayoutEffect(() => {
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           <Link href="/" aria-label="Go to home">
             <h1
               className={`title text-xl max-sm:text-lg transition-colors duration-500 ${
-                isDark ? "text-black" : "text-[#f4f4f4]"
+                isDark ? "text-[#f4f4f4]" : "text-[#090909]"
               }`}
             >
               _VK_
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
           <ul
             ref={listRef}
             className={`flex gap-10 text-lg max-sm:text-sm transition-colors duration-500 ${
-              isDark ? "text-black" : "text-[#f4f4f4]"
+              isDark ? "text-[#f4f4f4]" : "text-[#090909]"
             }`}
           >
             <li

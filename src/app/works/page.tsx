@@ -7,7 +7,9 @@ import React from "react";
 
 export default function WorksPage() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center"
+      data-theme="light"
+    >
       <Headding />
 
       {workItems.map((item) => (

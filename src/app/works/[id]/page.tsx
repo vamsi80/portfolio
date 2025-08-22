@@ -1,12 +1,16 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { caseDetails } from "@/types/types";
 
-const CaseDetailPage = ({ params }: { params: { id: string } }) => {
-  const caseData = caseDetails.find((c) => c.id === params.id);
+interface Params {
+  id: string;
+}
+
+export default async function CaseDetailPage({ params }: { params: Promise<Params> }) {
+  const { id } = await params;
+
+  const caseData = caseDetails.find((c) => c.id === id);
 
   if (!caseData) {
     return <p className="p-20">Case not found</p>;
@@ -14,12 +18,10 @@ const CaseDetailPage = ({ params }: { params: { id: string } }) => {
 
   return (
     <main className="min-h-screen bg-white text-black px-6 md:px-32 py-20">
-      {/* Case Number */}
       <p className="text-sm font-medium text-gray-800 mb-4">
         {caseData.caseNumber}
       </p>
 
-      {/* Title & Launch */}
       <div className="max-w-4xl mx-auto mt-20">
         <div className="mb-12">
           {caseData.isFictional && (
@@ -35,25 +37,21 @@ const CaseDetailPage = ({ params }: { params: { id: string } }) => {
           >
             Launch Site <ArrowUpRight className="w-4 h-4" />
           </Link>
-        </div>
+        </div> 
 
-        {/* Grid Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base">
           <div>
             <p className="text-gray-400 mb-2">Area of responsibility</p>
             <p className="font-medium">{caseData.areaOfResponsibility}</p>
           </div>
-
           <div>
-            <p className="text-gray-400 mb-2">development</p>
+            <p className="text-gray-400 mb-2">Development</p>
             <p className="font-medium">{caseData.development}</p>
           </div>
-
           <div>
             <p className="text-gray-400 mb-2">Project Overview</p>
             <p className="font-medium">{caseData.overview}</p>
           </div>
-
           <div>
             <p className="text-gray-400 mb-2">Production period</p>
             <p className="font-medium">{caseData.productionPeriod}</p>
@@ -113,6 +111,4 @@ const CaseDetailPage = ({ params }: { params: { id: string } }) => {
       </div>
     </main>
   );
-};
-
-export default CaseDetailPage;
+}
