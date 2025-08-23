@@ -5,20 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import { Typewriter } from "./ui/Typewriter";
 import { skilsText } from "@/types/types";
+import Link from "next/link";
 
 const Skils: FC = () => {
   return (
     <div className="bg-[#f4f4f4] min-h-screen w-full text-[#090909] pb-20">
       {/* View All Works Button */}
       <div className="flex pt-10 items-center justify-center">
-        <button
-          type="button"
+        <Link
+          href="/works"
           className="border border-black hover:bg-black hover:text-white transition rounded-full py-3 px-8 text-sm sm:text-base"
         >
           ・view all works
-        </button>
+        </Link>
       </div>
-      
+
       <div className="flex w-full px-4 sm:px-20 lg:px-20 pt-12 sm:pt-16">
         <div
           className="
@@ -67,10 +68,10 @@ const Skils: FC = () => {
       <div className="flex w-full mt-16 sm:mt-20 px-4 sm:px-6 lg:px-20">
         <div
           className="
-      w-full max-w-2xl text-left space-y-10
-      mx-auto            /* Center on small screens */
-      lg:ml-auto lg:mr-0 /* Push to right on large screens */
-    "
+          w-full max-w-2xl text-left space-y-10
+          mx-auto            /* Center on small screens */
+          lg:ml-auto lg:mr-0 /* Push to right on large screens */
+        "
         >
           {skilsText.map((item) => (
             <div key={item.id} className="space-y-3">

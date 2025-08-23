@@ -4,37 +4,10 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FC } from "react";
 import { Typewriter } from "../ui/Typewriter";
-import { aboutSections } from "@/types/types";
+import { aboutSections, AboutStrengths } from "@/types/types";
 import { AccordionTrigger, Accordion, AccordionContent, AccordionItem } from "../ui/Accordion";
 
 const Aboutpage: FC = () => {
-  const items = [
-    {
-      id: "1",
-      title: "What makes Origin UI different?",
-      content:
-        "Origin UI focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
-    },
-    {
-      id: "2",
-      title: "How can I customize the components?",
-      content:
-        "Use our CSS variables for global styling, or className and style props for component-specific changes. We support CSS modules, Tailwind, and dark mode out of the box.",
-    },
-    {
-      id: "3",
-      title: "Is Origin UI optimized for performance?",
-      content:
-        "Yes, with tree-shaking, code splitting, and minimal runtime overhead. Most components are under 5KB gzipped.",
-    },
-    {
-      id: "4",
-      title: "How accessible are the components?",
-      content:
-        "All components follow WAI-ARIA standards, featuring proper ARIA attributes, keyboard navigation, and screen reader support. Regular testing ensures compatibility with NVDA, VoiceOver, and JAWS.",
-    },
-  ];
-
   return (
     <div className="h-full w-full bg-[#f4f4f4]">
       <div className="max-w-4xl mx-auto mb-40 px-4">
@@ -66,8 +39,8 @@ const Aboutpage: FC = () => {
                   text-3xl
                   sm:text-3xl
                   md:text-4xl
-                  lg:text-5xl
-                  font-semibold
+                  lg:text-4xl
+                  font-bold
                 "
             />
             <FontAwesomeIcon
@@ -76,20 +49,20 @@ const Aboutpage: FC = () => {
             />
           </div>
 
-          <div className=" w-full px-40 py-10">
+          <div className=" w-full px-20 py-0">
             <div className="flex justify-end text-sm md:text-base">
-              <div className="grid grid-cols-1 gap-16 text-[#222] max-w-2xl w-full text-left">
+              <div className="grid grid-cols-1 gap-5 text-[#222] max-w-3xl w-full text-left">
                 {section.categories.map((category) => (
                   <div key={category.id}>
-                    <h3 className="text-xl font-semibold mb-2">
+                    <h3 className="text-2xl font-semibold mb-2">
                       {category.title}
                     </h3>
-                    <p className="text-gray-400 font-medium mb-4">
+                    <p className="text-gray-400 font-medium mb-3">
                       {category.skills.join("   ")}
                     </p>
-                    <div className="text-sm leading-relaxed">
+                    <div className=" leading-relaxed">
                       {category.description.map((desc, i) => (
-                        <p key={i} className="mb-2">
+                        <p key={i} className="mb-0">
                           {desc}
                         </p>
                       ))}
@@ -113,8 +86,8 @@ const Aboutpage: FC = () => {
                   text-3xl
                   sm:text-3xl
                   md:text-4xl
-                  lg:text-5xl
-                  font-semibold
+                  lg:text-4xl
+                  font-bold
                 "
           />
           <FontAwesomeIcon
@@ -123,17 +96,17 @@ const Aboutpage: FC = () => {
           />
         </div>
 
-        <div className="w-full px-40 py-10">
+        <div className="w-full px-20 py-10">
           <div className="flex justify-end text-sm md:text-base">
-            <div className="space-y-4 max-w-2xl w-full ">
+            <div className="space-y-4 max-w-3xl w-full ">
               <Accordion type="single" collapsible className="w-full" defaultValue="3">
-                {items.map((item) => (
-                  <AccordionItem key={item.id} value={item.id}>
-                    <AccordionTrigger className="flex items-center justify-between py-2 text-left text-[15px] font-semibold leading-6 transition-all">
-                      {item.title}
+                {AboutStrengths.map((strength) => (
+                  <AccordionItem key={strength.id} value={strength.id}>
+                    <AccordionTrigger className="flex items-center justify-between py-3 text-left text-[15px] font-semibold leading-6 transition-all">
+                      {strength.title}
                     </AccordionTrigger>
                     <AccordionContent className="pb-2 text-muted-foreground">
-                      {item.content}
+                      {strength.content}
                     </AccordionContent>
                   </AccordionItem>
                 ))}

@@ -65,7 +65,7 @@ const Page3: FC = () => {
             </h3>
           </div>
 
-          <div className="absolute bottom-80 right-36 
+          <div className="absolute bottom-80 right-36
                 sm:bottom-20 sm:right-10 
                 md:bottom-12 md:right-12
                 max-sm:bottom-5 max-sm:right-5 

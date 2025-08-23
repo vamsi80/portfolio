@@ -91,7 +91,7 @@ export const caseDetails: CaseDetail[] = [
     areaOfResponsibility: "Design/Implementation",
     development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
     overview:
-    "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
+      "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
     productionPeriod: "2 months",
     implementationDetails: [
       {
@@ -123,7 +123,7 @@ export const caseDetails: CaseDetail[] = [
     areaOfResponsibility: "Design/Implementation",
     development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
     overview:
-    "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
+      "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
     productionPeriod: "2 months",
     implementationDetails: [
       {
@@ -167,16 +167,22 @@ export const workItems: WorkItem[] = caseDetails.map((c, index) => ({
 }));
 
 export interface AboutCategory {
-  id: number;           
+  id: number;
   title: string;
   skills: string[];
   description: string[];
 }
 
 export interface AboutSection {
-  id: number;                 // 🔹 unique id for section
+  id: number;
   sectionTitle: string;
   categories: AboutCategory[];
+}
+
+export interface AboutStrengths {
+  id: string;
+  title: string;
+  content: string;
 }
 
 export const aboutSections: AboutSection[] = [
@@ -230,3 +236,36 @@ export const aboutSections: AboutSection[] = [
     ],
   },
 ];
+
+export interface AboutStrengths {
+  id: string;
+  title: string;
+  content: string;
+}
+
+export const AboutStrengths: AboutStrengths[] = [
+  {
+    id: "1",
+    title: "What makes Origin UI different?",
+    content:
+      "Origin UI focuses on developer experience and performance. Built with TypeScript, it offers excellent type safety, follows accessibility standards, and provides comprehensive documentation with regular updates.",
+  },
+  {
+    id: "2",
+    title: "How can I customize the components?",
+    content:
+      "Use our CSS variables for global styling, or className and style props for component-specific changes. We support CSS modules, Tailwind, and dark mode out of the box.",
+  },
+  {
+    id: "3",
+    title: "Is Origin UI optimized for performance?",
+    content:
+      "Yes, with tree-shaking, code splitting, and minimal runtime overhead. Most components are under 5KB gzipped.",
+  },
+  {
+    id: "4",
+    title: "How accessible are the components?",
+    content:
+      "All components follow WAI-ARIA standards, featuring proper ARIA attributes, keyboard navigation, and screen reader support. Regular testing ensures compatibility with NVDA, VoiceOver, and JAWS.",
+  },
+]
