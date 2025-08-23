@@ -165,3 +165,68 @@ export const workItems: WorkItem[] = caseDetails.map((c, index) => ({
   client: `${c.caseNumber} ${c.title}`,
   detailLink: `/works/${c.id}`,
 }));
+
+export interface AboutCategory {
+  id: number;           
+  title: string;
+  skills: string[];
+  description: string[];
+}
+
+export interface AboutSection {
+  id: number;                 // 🔹 unique id for section
+  sectionTitle: string;
+  categories: AboutCategory[];
+}
+
+export const aboutSections: AboutSection[] = [
+  {
+    id: 1,
+    sectionTitle: "SKILLS",
+    categories: [
+      {
+        id: 1,
+        title: "Development Language",
+        skills: ["HTML/CSS", "Sass", "JavaScript"],
+        description: [
+          "It is possible to code static sites using HTML/CSS (or Sass) and JavaScript.",
+          "It is conscious of class management and semantic coding using BEM.",
+          "JavaScript uses a library that does not depend on jQuery, so it adopts pure writing.",
+        ],
+      },
+      {
+        id: 2,
+        title: "Library",
+        skills: ["Swiper", "Three.js", "GSAP"],
+        description: [
+          "It is also possible to actively incorporate libraries found on many sites, such as Swiper and GSAP.",
+          "Information gathering is based on reading documentation as much as possible, but information is also gathered from blogs such as Zenn and videos on YouTube and Udemy.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    sectionTitle: "EXPERIENCE",
+    categories: [
+      {
+        id: 1,
+        title: "Justpic (Internship)",
+        skills: ["Web Development", "Full-time"],
+        description: [
+          "Worked for 2 months as a full-time web developer intern.",
+          "Built and deployed 2 real-world projects.",
+        ],
+      },
+      {
+        id: 2,
+        title: "Smart India Hackathon",
+        skills: ["Teamwork", "Problem Solving"],
+        description: [
+          "Participated in Smart India Hackathon with a 36-hour continuous coding challenge.",
+          "Developed solutions around traffic signal control for ambulances.",
+        ],
+      },
+    ],
+  },
+];
