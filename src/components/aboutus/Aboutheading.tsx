@@ -8,7 +8,7 @@ const AboutHeadding: FC = () => {
     <div className="h-full w-full">
       <div className="top-0 h-[100vh] px-10 md:px-20 w-full flex flex-col items-left justify-center bg-[#f4f4f4] text-[#1B1B1B]">
         <Typewriter
-          text={["ABOUT vamsi"]}
+          text={["ABOUT"]}
           speed={80}
           loop={false}
           className="
