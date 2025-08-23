@@ -7,6 +7,7 @@ import Link from "next/link";
 
 const Page2: FC = () => {
     const [fontSize, setFontSize] = useState(60);
+    console.log(fontSize);
 
     useEffect(() => {
         const handleResize = () => {

@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import TextPlugin from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Typewriter } from "./ui/Typewriter";
+import Image from "next/image";
 
 const Page3: FC = () => {
   const headingLine1 = useRef<HTMLHeadingElement | null>(null);
@@ -51,11 +52,13 @@ const Page3: FC = () => {
 
       {bgimages.map((bgimage) => (
         <div key={bgimage.id} className="sticky top-0 z-50 h-full w-full">
-          <img
+          <Image
             loading="lazy"
             className="h-full w-full max-sm:h-[35rem] object-cover"
             src={bgimage.img}
             alt={`Background for ${bgimage.project}`}
+            width={700}
+            height={500}
           />
           <div className="absolute inset-0 backdrop-blur-sm"></div>
 
@@ -84,11 +87,13 @@ const Page3: FC = () => {
 
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="relative w-[35vw] h-[31vw] max-sm:w-[91vw] bottom-12 max-sm:h-[101vw] max-sm:pt-12 cursor-pointer shadow-lg hover:scale-105 transition-all ease-in-out duration-300">
-              <img
+              <Image
                 className="h-full w-full object-cover"
                 src={bgimage.thumbnail}
                 alt={`Thumbnail for ${bgimage.project}`}
                 loading="lazy"
+                width={700}
+                height={500}
               />
             </div>
           </div>

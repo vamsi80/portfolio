@@ -21,9 +21,9 @@ const Aboutpage: FC = () => {
           {/* Right column - 75% on md+ screens */}
           <div className="md:w-3/4 w-full">
             <p className="">After graduating from a medical graduate school, he worked for an environmental consultant. He then moved to a design company, where he was responsible for in-house media operations in the public relations department.
-              In July 2022, he transferred to the company's design department, where he works as a graphic designer.
+              In July 2022, he transferred to the company`&apos;`s design department, where he works as a graphic designer.
 
-              After graduating from Digital Hollywood STUDIO by LIG's web design major course in June 2023, he also works as a coder at the company.</p>
+              After graduating from Digital Hollywood STUDIO by LIG`&apos;`s web design major course in June 2023, he also works as a coder at the company.</p>
           </div>
         </div>
       </div>

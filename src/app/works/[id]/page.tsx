@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { caseDetails } from "@/types/types";
+import Image from "next/image";
 
 interface Params {
   id: string;
@@ -37,7 +38,7 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
           >
             Launch Site <ArrowUpRight className="w-4 h-4" />
           </Link>
-        </div> 
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base">
           <div>
@@ -77,35 +78,43 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
 
         {/* Images */}
         <div>
-          <img
+          <Image
             src={caseData.images[0]}
             alt="Case Detail"
             className="w-full h-auto mt-10"
+            width={700}
+            height={500}
           />
         </div>
 
         <div className="grid grid-cols-2 gap-10 mt-20">
           <div>
-            <img
+            <Image
               src={caseData.images[1]}
               alt="Case Detail"
               className="w-full h-auto mt-10"
+              width={700}
+              height={500}
             />
           </div>
           <div>
-            <img
+            <Image
               src={caseData.images[2]}
               alt="Case Detail"
               className="w-full h-auto mt-10"
+              width={700}
+              height={500}
             />
           </div>
         </div>
 
         <div>
-          <img
+          <Image
             src={caseData.images[3]}
             alt="Case Detail"
             className="w-[700px] h-auto mt-10"
+            width={700}
+            height={500}
           />
         </div>
       </div>

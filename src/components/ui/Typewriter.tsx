@@ -16,7 +16,7 @@ export interface TypewriterProps {
 export function Typewriter({
   text,
   speed = 100,
-  cursor = "|",
+  // cursor = "|",
   loop = false,
   deleteSpeed = 50,
   delay = 1500,
