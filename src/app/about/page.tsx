@@ -1,7 +1,7 @@
 "use client";
 
-import AboutHeadding from "@/components/aboutus/Aboutheading";
-import Aboutpage from "@/components/aboutus/Aboutpage";
+import AboutHeadding from "@/components/about/Aboutheading";
+import Aboutpage from "@/components/about/Aboutpage";
 import React from "react";
 
 export default function WorksPage() {

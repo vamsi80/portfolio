@@ -3,6 +3,7 @@
 import React, { FC, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const Page2: FC = () => {
     const [fontSize, setFontSize] = useState(60);
@@ -32,9 +33,14 @@ const Page2: FC = () => {
                     />
                 </div>
 
-                <h2 className="text-center font-bold mt-10 text-7xl max-sm:text-[12vw] glitch" data-text="Who Is Vamsi?">
-                    Who Is Vamsi?
-                </h2>
+                <Link href="/about">
+                    <h2
+                        className="cursor-pointer text-center font-bold mt-10 text-7xl max-sm:text-[12vw] glitch"
+                        data-text="Who Is Vamsi?"
+                    >
+                        Who Is Vamsi?
+                    </h2>
+                </Link>
 
                 <p className="text-center mt-2 text-[1rem] text-[#8E8E8E] font-semibold max-sm:px-12 max-sm:text-start">
                     Handling graphic design and coding at a design company,
