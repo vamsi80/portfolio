@@ -22,16 +22,10 @@ const Aboutpage: FC = () => {
           {/* Right column */}
           <div className="md:w-3/4 w-full">
             <p>
-              After graduating from a medical graduate school, he worked for an
-              environmental consultant. He then moved to a design company,
-              where he was responsible for in-house media operations in the
-              public relations department.
+              I graduated from GITAM University, where I developed strong problem-solving and analytical skills. During my graduation, I completed a Full Stack Development internship, where I built and deployed real-world projects. This experience helped me bridge my engineering background with software development and strengthened my practical skills in building end-to-end applications.
             </p>
             <p className="mt-3">
-              In July 2022, he transferred to the company’s design department,
-              where he works as a graphic designer. After graduating from
-              Digital Hollywood STUDIO by LIG’s web design major course in June
-              2023, he also works as a coder at the company.
+              After completing my degree, I joined Creative and Interactive Immersive Solutions Company in Bengaluru as a Full-Time Full Stack Developer. In this role, I collaborated with diverse clients and was responsible for designing, developing, and deploying fully functional websites and real-time web solutions. My work contributed to enhancing client visibility, improving user engagement, and delivering scalable digital products tailored to business needs.
             </p>
           </div>
         </div>
@@ -65,7 +59,7 @@ const Aboutpage: FC = () => {
                       {category.title}
                     </h3>
                     <p className="text-gray-400 font-medium mb-3">
-                      {category.skills.join("   ")}
+                      {category.skills.join("  \u00A0\u00A0 ")}
                     </p>
                     <div className="leading-relaxed space-y-2">
                       {category.description.map((desc, i) => (

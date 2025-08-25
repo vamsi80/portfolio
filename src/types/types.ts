@@ -192,21 +192,53 @@ export const aboutSections: AboutSection[] = [
     categories: [
       {
         id: 1,
-        title: "Development Language",
-        skills: ["HTML/CSS", "Sass", "JavaScript"],
+        title: "Development Languages",
+        skills: ["HTML/CSS", "Python", "JavaScript", "TypeScript"],
         description: [
-          "It is possible to code static sites using HTML/CSS (or Sass) and JavaScript.",
-          "It is conscious of class management and semantic coding using BEM.",
-          "JavaScript uses a library that does not depend on jQuery, so it adopts pure writing.",
+          "I used HTML and CSS to create responsive layouts and visually appealing user interfaces.",
+          "I applied JavaScript to develop interactive features and scalable web applications.",
+          "I used Python in projects to build backends, create APIs, and develop data-driven solutions.",
         ],
       },
       {
         id: 2,
         title: "Library",
-        skills: ["Swiper", "Three.js", "GSAP"],
+        skills: ["React", "GSAP"],
         description: [
-          "It is also possible to actively incorporate libraries found on many sites, such as Swiper and GSAP.",
-          "Information gathering is based on reading documentation as much as possible, but information is also gathered from blogs such as Zenn and videos on YouTube and Udemy.",
+          "We can use React to build dynamic and reusable user interfaces. It works by using a virtual DOM and component-based architecture to update pages efficiently without reloading.",
+          "We can use GSAP for creating smooth, high-performance animations. It works by controlling timelines and elements with precise motion, making interactions more engaging and responsive.s",
+        ],
+      },
+      {
+        id: 3,
+        title: "Frameworks / CMS",
+        skills: ["Next.js", "TailwindCSS", "Shopify", "Wix"],
+        description: [
+          "I work with a range of frameworks and CMS platforms, selecting the right one based on project requirements. Whether it’s building scalable web applications with Next.js,designing responsive and modern UI with TailwindCSS,setting up robust e-commerce stores on Shopify, or delivering fast and efficient websites with Wix, I ensure that every solution is optimized for performance, scalability, and user experience.",
+        ],
+      },
+      {
+        id: 4,
+        title: "APIs & Services",
+        skills: ["REST APIs", "RESTful APIs", "Postman"],
+        description: [
+          "I design and develop my own APIs and endpoints, implementing REST and RESTful principles. By connecting databases with structured endpointsI enable smooth communication between client and server, ensuring data is delivered securely and efficiently.I also use Postman to test and validate APIs, making sure they work as intended before deployment.",
+        ],
+      },
+      {
+        id: 5,
+        title: "Databases",
+        skills: ["NoSQL", "Firebase (Database & Auth)", "PostgreSQL"],
+        description: [
+          "I work with both SQL and NoSQL databases, enabling efficient data storage, retrieval, and integration into scalable applications.",
+        ],
+      },
+      {
+        id: 6,
+        title: "Tools",
+        skills: ["GitHub", "Vercel", "Illustrator", "Figma", "BrightSign"],
+        description: [
+          "I use tools that support efficient collaboration, deployment, and design workflows—helping me deliver production-ready solutions seamlessly.",
         ],
       },
     ],

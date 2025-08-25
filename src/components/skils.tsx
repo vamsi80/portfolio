@@ -81,7 +81,7 @@ const Skils: FC = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-sm sm:text-base lg:text-lg text-[#444] font-normal">
+              <p className="text-sm sm:text-base lg:text-m text-[#444] font-normal">
                 {item.description}
               </p>
 
