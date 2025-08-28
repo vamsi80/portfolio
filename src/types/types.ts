@@ -1,38 +1,38 @@
-export interface BgImage {
-  id: number;
-  img: string;
-  title: string;
-  project: string;
-  description: string;
-  thumbnail: string;
-}
+// export interface BgImage {
+//   id: number;
+//   img: string;
+//   title: string;
+//   project: string;
+//   description: string;
+//   thumbnail: string;
+// }
 
-export const bgimages: BgImage[] = [
-  {
-    id: 1,
-    img: "/images/bg-1.png",
-    title: "#case_01",
-    project: "FURYU",
-    description: "Brand site / Client work",
-    thumbnail: "/images/thum-1.png",
-  },
-  {
-    id: 2,
-    img: "/images/bg-2.png",
-    title: "#case_02",
-    project: "PORTFOLIO",
-    description: "Portfolio site / Private work",
-    thumbnail: "/images/thum-2.png",
-  },
-  {
-    id: 3,
-    img: "/images/bg-3.png",
-    title: "#case_03",
-    project: "GREEN ENERGY",
-    description: "Corporate site / Private work",
-    thumbnail: "/images/thum-3.png",
-  },
-];
+// export const bgimages: BgImage[] = [
+//   {
+//     id: 1,
+//     img: "/images/bg-1.png",
+//     title: "#case_01",
+//     project: "LATTICE LANE",
+//     description: "Brand site / Client work",
+//     thumbnail: "/images/thum-1.png",
+//   },
+//   {
+//     id: 2,
+//     img: "/images/bg-2.png",
+//     title: "#case_02",
+//     project: "PORTFOLIO",
+//     description: "Portfolio site / Private work",
+//     thumbnail: "/images/thum-2.png",
+//   },
+//   {
+//     id: 3,
+//     img: "/images/bg-3.png",
+//     title: "#case_03",
+//     project: "GREEN ENERGY",
+//     description: "Corporate site / Private work",
+//     thumbnail: "/images/thum-3.png",
+//   },
+// ];
 
 export interface skilsText {
   id: number;
@@ -62,88 +62,126 @@ export const skilsText: skilsText[] = [
   },
 ];
 
+// types.ts
 export interface ImplementationDetail {
   title: string;
   points: string[];
 }
 
-export interface CaseDetail {
-  id: string;
+export type MediaType = "image" | "video";
+
+export interface MediaItem {
+  type: MediaType;
+  src: string;
+}
+
+export interface Project {
+  id: string;              // unique id for params
   caseNumber: string;
-  isFictional?: boolean;
   title: string;
+  // project: string;
+  isFictional?: boolean;
   launchUrl: string;
+  leftimage: string;
+
+  // Home page preview props
+  img: string;
+  thumbnail: string;
+  description: string;
+
+  // Case details
   areaOfResponsibility: string;
   development: string;
   overview: string;
   productionPeriod: string;
   implementationDetails: ImplementationDetail[];
-  images: string[];
+  media: MediaItem[]
 }
 
-export const caseDetails: CaseDetail[] = [
+export const projects: Project[] = [
   {
-    id: "green-energy",
-    caseNumber: "# case_03",
-    isFictional: true,
-    title: "Green Energy",
+    id: "lattice-lane",
+    caseNumber: "#case_01",
+    title: "LATTICE LANE",
     launchUrl: "https://example.com",
+    isFictional: false,
+    leftimage: "/projects/latticelane/faceimage.png",
+
+    img: "/images/bg-1.png",
+    thumbnail: "/images/thum-1.png",
+    description: "Brand site / Client work",
+
     areaOfResponsibility: "Design/Implementation",
     development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
     overview:
       "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
     productionPeriod: "2 months",
     implementationDetails: [
-      {
-        title: "Implementation details 1",
-        points: ["WORKS", "ABOUT"],
-      },
-      {
-        title: "Implementation details 2",
-        points: ["WORKS", "ABOUT"],
-      },
-      {
-        title: "Implementation details 3",
-        points: ["WORKS", "ABOUT"],
-      },
+      { title: "Implementation details 1", points: ["WORKS", "ABOUT"] },
+      { title: "Implementation details 2", points: ["WORKS", "ABOUT"] },
+      { title: "Implementation details 3", points: ["WORKS", "ABOUT"] },
     ],
-    images: [
-      "/images/bg-1.png",
-      "/images/bg-1.png",
-      "/images/bg-1.png",
-      "/images/bg-1.png",
+    media: [
+      { type: "image", src: "/projects/latticelane/mobile.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "video", src: "/projects/latticelane/Latticelane.mp4" },
     ],
   },
   {
-    id: "lattice-lane",
-    caseNumber: "# case_03",
-    isFictional: true,
-    title: "lattice lane",
+    id: "portfolio",
+    caseNumber: "#case_02",
+    title: "PORTFOLIO",
     launchUrl: "https://example.com",
+    isFictional: false,
+    leftimage: "/string",
+
+    img: "/images/bg-2.png",
+    thumbnail: "/images/thum-2.png",
+    description: "Portfolio site / Private work",
+
+    areaOfResponsibility: "Design/Implementation",
+    development: "Next.js Tailwind GSAP",
+    overview: "A personal portfolio website to showcase projects and case studies.",
+    productionPeriod: "1 month",
+    implementationDetails: [
+      { title: "UI/UX", points: ["Responsive design", "Animations"] },
+      { title: "Frontend", points: ["Next.js", "GSAP"] },
+    ],
+    media: [
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "video", src: "/videos/demo.mp4" },
+    ],
+  },
+  {
+    id: "stree",
+    caseNumber: "#case_03",
+    title: "THE STREE",
+    launchUrl: "https://example.com",
+    isFictional: true,
+    leftimage: "/projects/stree/faceimage.png",
+
+    img: "/images/bg-3.png",
+    thumbnail: "/images/thum-3.png",
+    description: "Corporate site / Private work",
+
     areaOfResponsibility: "Design/Implementation",
     development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
     overview:
       "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
     productionPeriod: "2 months",
     implementationDetails: [
-      {
-        title: "Implementation details 1",
-        points: ["WORKS", "ABOUT"],
-      },
-      {
-        title: "Implementation details 2",
-        points: ["WORKS", "ABOUT"],
-      },
-      {
-        title: "Implementation details 3",
-        points: ["WORKS", "ABOUT"],
-      },
+      { title: "Implementation details 1", points: ["WORKS", "ABOUT"] },
+      { title: "Implementation details 2", points: ["WORKS", "ABOUT"] },
+      { title: "Implementation details 3", points: ["WORKS", "ABOUT"] },
     ],
-    images: [
-      "/images/bg-1.png",
-      "/images/bg-1.png",
-      "/images/bg-1.png",
-      "/images/bg-1.png",
+    media: [
+      { type: "image", src: "/projects/stree/mobile.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "video", src: "/projects/stree/stree.mp4" },
     ],
   },
 ];
@@ -157,37 +195,65 @@ export interface WorkItem {
   detailLink?: string;
 }
 
-export const workItems: WorkItem[] = caseDetails.map((c, index) => ({
+export const workItems: WorkItem[] = projects.map((c, index) => ({
   id: index + 1,
-  leftImage: "/images/bg-1.png",
-  rightImage: "/images/bg-1.png",
+  leftImage: c.leftimage,
+  rightImage: c.media[0].src, 
   title: c.title,
   client: `${c.caseNumber} ${c.title}`,
   detailLink: `/works/${c.id}`,
 }));
 
-export interface AboutCategory {
+export interface SkillCategory {
   id: number;
   title: string;
   skills: string[];
   description: string[];
 }
 
-export interface AboutSection {
+export interface ExperienceCategory {
   id: number;
-  sectionTitle: string;
-  categories: AboutCategory[];
+  monthStart: string;
+  yearStart: string;
+  monthEnd: string | "Now";
+  yearEnd: string | null;
+  role: string;
+  company: string;
+  description: string[];
 }
 
-export interface AboutStrengths {
+export interface StrengthCategory {
   id: string;
   title: string;
   content: string;
 }
 
+export interface AboutSectionBase {
+  id: number;
+  sectionTitle: string;
+}
+
+export interface AboutSectionSkills extends AboutSectionBase {
+  type: "skills";
+  categories: SkillCategory[];
+}
+
+export interface AboutSectionExperience extends AboutSectionBase {
+  type: "experience";
+  categories: ExperienceCategory[];
+}
+
+export interface AboutSectionStrengths extends AboutSectionBase {
+  type: "strengths";
+  categories: StrengthCategory[];
+}
+
+export type AboutSection = AboutSectionSkills | AboutSectionExperience | AboutSectionStrengths;
+
 export const aboutSections: AboutSection[] = [
   {
     id: 1,
+    type: "skills",
     sectionTitle: "SKILLS",
     categories: [
       {
@@ -245,25 +311,61 @@ export const aboutSections: AboutSection[] = [
   },
   {
     id: 2,
+    type: "experience",
     sectionTitle: "EXPERIENCE",
     categories: [
       {
         id: 1,
-        title: "Justpic (Internship)",
-        skills: ["Web Development", "Full-time"],
+        monthStart: "05",
+        yearStart: "24",
+        monthEnd: "Now",
+        role: "Full stack developer",
+        company: "White Tusker",
+        yearEnd: null,
         description: [
-          "Worked for 2 months as a full-time web developer intern.",
-          "Built and deployed 2 real-world projects.",
+          "Since joining WhiteTusker, I have been involved in building and maintaining websites, successfully completing over four projects from start to finish.",
+          "My work covers the entire product development cycle, including building, updating, and managing websites across multiple platforms.",
+          "Additionally, I have developed SaaS applications, an area I am particularly interested in. I have also been involved in digital interaction projects for a large aerospace client.",
         ],
       },
       {
         id: 2,
-        title: "Smart India Hackathon",
-        skills: ["Teamwork", "Problem Solving"],
+        monthStart: "05",
+        yearStart: "23",
+        monthEnd: "06",
+        yearEnd: "23",
+        role: "Full stack developer Intern",
+        company: "JustPic",
         description: [
-          "Participated in Smart India Hackathon with a 36-hour continuous coding challenge.",
-          "Developed solutions around traffic signal control for ambulances.",
+          "During my internship, I built end-to-end web applications while focusing mainly on backend functionality. ",
+          "I maintained the folder structure of functions and performed basic CRUD operations to support application development.",
+          "Through this experience, I gained practical knowledge of working with real-time applications in a professional environment.",
         ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    type: "strengths",
+    sectionTitle: "STRENGTHS",
+    categories: [
+      {
+        id: "1",
+        title: "Strong Motivation and Continuous Learning",
+        content:
+          "Highly motivated to learn and adaptable, I began with no prior implementation experience but quickly took the initiative to study core web technologies and platforms. I actively gathered knowledge from blogs and tutorials, organizing my learning to build websites and applications independently. I continue to enhance my skills by exploring modern technologies like Next.js, Tailwind CSS, TypeScript, and SaaS development to stay updated with the latest trends.",
+      },
+      {
+        id: "2",
+        title: "Effective Problem-Solving and Efficient Execution",
+        content:
+          "I have strong problem-solving skills with a focus on understanding user needs. I quickly identify issues and efficiently implement solutions to improve processes. My ability to execute tasks promptly ensures timely delivery and smooth project progress. I am committed to creating effective and user-friendly outcomes.",
+      },
+      {
+        id: "3",
+        title: "End-to-End Development Expertise",
+        content:
+          "I have experience developing projects from scratch, handling everything from initial planning to final deployment. This includes designing structures, coding, and testing to build complete, functional applications.",
       },
     ],
   },

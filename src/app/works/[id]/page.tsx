@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { caseDetails } from "@/types/types";
+import { projects } from "@/types/types";
 import Image from "next/image";
 
 interface Params {
@@ -11,7 +11,7 @@ interface Params {
 export default async function CaseDetailPage({ params }: { params: Promise<Params> }) {
   const { id } = await params;
 
-  const caseData = caseDetails.find((c) => c.id === id);
+  const caseData = projects.find((c) => c.id === id);
 
   if (!caseData) {
     return <p className="p-20">Case not found</p>;
@@ -76,46 +76,81 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
           </div>
         </div>
 
-        {/* Images */}
+        {/* First full-width */}
         <div>
-          <Image
-            src={caseData.images[0]}
-            alt="Case Detail"
-            className="w-full h-auto mt-10"
-            width={700}
-            height={500}
-          />
-        </div>
-
-        <div className="grid grid-cols-2 gap-10 mt-20">
-          <div>
+          {caseData.media[0].type === "image" ? (
             <Image
-              src={caseData.images[1]}
+              src={caseData.media[0].src}
               alt="Case Detail"
               className="w-full h-auto mt-10"
               width={700}
               height={500}
             />
-          </div>
-          <div>
+          ) : (
+            <video
+              controls
+              className="w-full h-auto mt-10 rounded-lg"
+            >
+              <source src={caseData.media[0].src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
+        </div>
+
+        {/* Grid 2 columns */}
+        <div className="grid grid-cols-2 gap-10 mt-10">
+          {[caseData.media[1], caseData.media[2]].map((item, index) => (
+            <div
+              key={index}
+              className={index === 1 ? "mt-20" : ""} 
+            >
+              {item.type === "image" ? (
+                <Image
+                  src={item.src}
+                  alt={`Case Detail ${index}`}
+                  className="w-full h-auto mt-10"
+                  width={700}
+                  height={500}
+                />
+              ) : (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto mt-10 rounded-lg"
+                >
+                  <source src={item.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </div>
+          ))}
+        </div>
+
+
+        {/* Last single */}
+        <div>
+          {caseData.media[3].type === "image" ? (
             <Image
-              src={caseData.images[2]}
+              src={caseData.media[3].src}
               alt="Case Detail"
-              className="w-full h-auto mt-10"
+              className="w-[700px] h-auto mt-10"
               width={700}
               height={500}
             />
-          </div>
-        </div>
-
-        <div>
-          <Image
-            src={caseData.images[3]}
-            alt="Case Detail"
-            className="w-[700px] h-auto mt-10"
-            width={700}
-            height={500}
-          />
+          ) : (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-[700px] h-auto mt-20 rounded-lg"
+            >
+              <source src={caseData.media[3].src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
       </div>
     </main>

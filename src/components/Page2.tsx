@@ -49,9 +49,11 @@ const Page2: FC = () => {
                 </p>
 
                 <div className="pt-14 group">
-                    <p className="text-center cursor-pointer font-semibold text-sm max-sm:text-xs max-sm:text-start max-sm:pl-12 max-sm:font-bold pb-20">
-                        Know about me
-                    </p>
+                    <Link href="/about">
+                        <p className="text-center cursor-pointer font-semibold text-sm max-sm:text-xs max-sm:text-start max-sm:pl-12 max-sm:font-bold pb-20">
+                            Know about me
+                        </p>
+                    </Link>
                 </div>
             </div>
         </>
