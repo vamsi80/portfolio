@@ -26,7 +26,7 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
       <div className="max-w-4xl mx-auto mt-20">
         <div className="mb-12">
           {caseData.isFictional && (
-            <p className="text-sm text-gray-500 mb-2">*Fictional site</p>
+            <p className="text-sm text-gray-500 mb-2">{caseData.disclaimerText}</p>
           )}
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             {caseData.title}
@@ -36,37 +36,37 @@ export default async function CaseDetailPage({ params }: { params: Promise<Param
             target="_blank"
             className="flex items-center gap-1 text-sm font-medium hover:underline"
           >
-            Launch Site <ArrowUpRight className="w-4 h-4" />
+            {caseData.launchName} <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base">
           <div>
             <p className="text-gray-400 mb-2">Area of responsibility</p>
-            <p className="font-medium">{caseData.areaOfResponsibility}</p>
+            <p className="font-normal text-[#474747]">{caseData.areaOfResponsibility}</p>
           </div>
           <div>
             <p className="text-gray-400 mb-2">Development</p>
-            <p className="font-medium">{caseData.development}</p>
+            <p className="font-normal text-[#474747]">{caseData.development}</p>
           </div>
           <div>
             <p className="text-gray-400 mb-2">Project Overview</p>
-            <p className="font-medium">{caseData.overview}</p>
+            <p className="font-normal text-[#474747]">{caseData.overview}</p>
           </div>
           <div>
             <p className="text-gray-400 mb-2">Production period</p>
-            <p className="font-medium">{caseData.productionPeriod}</p>
+            <p className="font-normal text-[#474747]">{caseData.productionPeriod}</p>
           </div>
         </div>
 
         {/* Implementation Details */}
         <div className="mt-10">
-          <p className="text-gray-400 mb-2">Implementation details</p>
+          <p className="text-gray-400 mb-2 font-semibold">Implementation details</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {caseData.implementationDetails.map((detail, index) => (
               <div key={index}>
-                <p className="text-gray-400 mb-2">{detail.title}</p>
-                <ul className="list-disc list-inside space-y-1">
+                <p className="text-[#090909] mb-2 font-medium">{detail.title}</p>
+                <ul className="list-disc list-outside space-y-1 text-[#474747] font-normal">
                   {detail.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

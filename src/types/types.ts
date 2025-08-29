@@ -81,6 +81,7 @@ export interface Project {
   title: string;
   // project: string;
   isFictional?: boolean;
+  disclaimerText:string;
   launchUrl: string;
   leftimage: string;
 
@@ -90,6 +91,7 @@ export interface Project {
   description: string;
 
   // Case details
+  launchName:string;
   areaOfResponsibility: string;
   development: string;
   overview: string;
@@ -103,23 +105,25 @@ export const projects: Project[] = [
     id: "lattice-lane",
     caseNumber: "#case_01",
     title: "LATTICE LANE",
-    launchUrl: "https://example.com",
+    launchUrl: "https://latticelane.com/",
     isFictional: false,
+    disclaimerText: "*E-commerce site",
     leftimage: "/projects/latticelane/faceimage.png",
 
     img: "/images/bg-1.png",
     thumbnail: "/images/thum-1.png",
     description: "Brand site / Client work",
 
-    areaOfResponsibility: "Design/Implementation",
-    development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
+    launchName:"Launch Site",
+    areaOfResponsibility: "Led the end-to-end development of the e-commerce platform on Shopify, designing and implementing custom layouts tailored to the brand’s requirements.",
+    development: "Shopify (Liquid HTML, JSON, Shopify APIs) Custom theme development",
     overview:
-      "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
-    productionPeriod: "2 months",
+      "Lattice Lane is a modern e-commerce platform built on Shopify, designed to provide a seamless and personalized shopping experience. The website features custom layouts, optimized performance, and scalable architecture tailored to client needs.",
+    productionPeriod: "3 months",
     implementationDetails: [
-      { title: "Implementation details 1", points: ["WORKS", "ABOUT"] },
-      { title: "Implementation details 2", points: ["WORKS", "ABOUT"] },
-      { title: "Implementation details 3", points: ["WORKS", "ABOUT"] },
+      { title: "Custom Theme Development", points: ["Built the base structure from scratch using Liquid HTML and JSON templates.", "Developed modular, reusable layouts to allow flexibility across different product pages."] },
+      { title: "Performance & SEO Optimization", points: ["Implemented lightweight coding practices to ensure faster load times.", "Structured metadata and semantic HTML for SEO-friendly architecture.", "Integrated responsive, mobile-first design for better user experience."] },
+      { title: "Advanced Features & Customization", points: ["Created custom slideshows and banners to enhance product presentation.", "Customized billing flows for different regions and requirements.", "Applied creative problem-solving to handle tricky design and functional challenges."] },
     ],
     media: [
       { type: "image", src: "/projects/latticelane/mobile.png" },
@@ -134,12 +138,14 @@ export const projects: Project[] = [
     title: "PORTFOLIO",
     launchUrl: "https://example.com",
     isFictional: false,
+    disclaimerText: "*Fictional site",
     leftimage: "/string",
 
     img: "/images/bg-2.png",
     thumbnail: "/images/thum-2.png",
     description: "Portfolio site / Private work",
 
+    launchName:"Launch Site",
     areaOfResponsibility: "Design/Implementation",
     development: "Next.js Tailwind GSAP",
     overview: "A personal portfolio website to showcase projects and case studies.",
@@ -159,23 +165,25 @@ export const projects: Project[] = [
     id: "stree",
     caseNumber: "#case_03",
     title: "THE STREE",
-    launchUrl: "https://example.com",
+    launchUrl: "https://github.com/vamsi80/stree",
     isFictional: true,
+    disclaimerText: "*Branding site",
     leftimage: "/projects/stree/faceimage.png",
 
     img: "/images/bg-3.png",
     thumbnail: "/images/thum-3.png",
     description: "Corporate site / Private work",
 
-    areaOfResponsibility: "Design/Implementation",
-    development: "HTML/CSS(Sass) JavaScript PHP Swiper GSAP WordPress",
+    launchName:"GitHub Link",
+    areaOfResponsibility: "Designed and developed a simple single-page advertising website from scratch using Next.js and Tailwind CSS, with a strong focus on responsive layouts across all devices, managing version control through GitHub and deploying seamlessly on Vercel.",
+    development: "Next.js Tailwind CSS Responsive Design Techniques GitHub (content management), Vercel (hosting)",
     overview:
-      "We designed and implemented the corporate website for an environmental energy company to convey the impression of reliability and honesty.",
-    productionPeriod: "2 months",
+      "The Stree Co is a lightweight, single-page advertising website built with Next.js to showcase brand offerings in a simple yet effective way. The project’s main objective was to create a clean, responsive design that works smoothly across all devices while maintaining fast performance.",
+    productionPeriod: "1 day",
     implementationDetails: [
-      { title: "Implementation details 1", points: ["WORKS", "ABOUT"] },
-      { title: "Implementation details 2", points: ["WORKS", "ABOUT"] },
-      { title: "Implementation details 3", points: ["WORKS", "ABOUT"] },
+      { title: "Responsive Web Design", points: ["Applied responsive techniques to ensure compatibility across mobile, tablet, and desktop.", "Designed flexible layouts to adjust content without breaking visual hierarchy."] },
+      { title: "From Scratch Development", points: ["Built the entire project from the ground up using Next.js.", "Maintained version control and collaboration through GitHub."] },
+      { title: "Deployment & Hosting", points: ["Published the project seamlessly on Vercel, enabling fast and reliable performance.", "Integrated smooth workflows from development to production."] },
     ],
     media: [
       { type: "image", src: "/projects/stree/mobile.png" },
