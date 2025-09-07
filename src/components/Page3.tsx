@@ -23,8 +23,8 @@ const Page3: FC = () => {
           text: "WORKS",
           scrollTrigger: {
             trigger: headingLine1.current,
-            start: "top 80%", // when the top of h1 hits 80% of viewport
-            toggleActions: "play none none reverse", // play on enter, reverse on leave
+            start: "top 80%",
+            toggleActions: "play none none reverse",
           },
         });
       }
@@ -64,14 +64,12 @@ const Page3: FC = () => {
             />
             <div className="absolute inset-0 backdrop-blur-sm"></div>
 
-            {/* Title top-left */}
             <div className="absolute top-20 left-20 max-sm:top-5 max-sm:left-5 z-50">
               <h3 className="text-lg text-white max-sm:text-xs font-semibold">
                 {project.caseNumber}
               </h3>
             </div>
 
-            {/* Description bottom-right */}
             <div className="absolute bottom-80 right-36 max-sm:bottom-5 max-sm:right-5 z-50 text-white">
               <h2 className="text-xl sm:text-lg md:text-xl max-sm:text-sm font-bold">
                 {project.title}
@@ -86,9 +84,8 @@ const Page3: FC = () => {
               </Link>
             </div>
 
-            {/* Thumbnail center */}
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className="relative w-[35vw] h-[31vw] max-sm:w-[91vw] bottom-12 max-sm:h-[101vw] max-sm:pt-12 cursor-pointer shadow-lg hover:scale-105 transition-all ease-in-out duration-300">
+              <div className="relative w-[25vw] h-auto max-sm:w-[91vw] bottom-12 max-sm:h-[101vw] max-sm:pt-12 cursor-pointer shadow-lg hover:scale-105 transition-all ease-in-out duration-300">
                 <Image
                   className="h-full w-full object-cover"
                   src={project.thumbnail}

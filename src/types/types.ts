@@ -1,39 +1,3 @@
-// export interface BgImage {
-//   id: number;
-//   img: string;
-//   title: string;
-//   project: string;
-//   description: string;
-//   thumbnail: string;
-// }
-
-// export const bgimages: BgImage[] = [
-//   {
-//     id: 1,
-//     img: "/images/bg-1.png",
-//     title: "#case_01",
-//     project: "LATTICE LANE",
-//     description: "Brand site / Client work",
-//     thumbnail: "/images/thum-1.png",
-//   },
-//   {
-//     id: 2,
-//     img: "/images/bg-2.png",
-//     title: "#case_02",
-//     project: "PORTFOLIO",
-//     description: "Portfolio site / Private work",
-//     thumbnail: "/images/thum-2.png",
-//   },
-//   {
-//     id: 3,
-//     img: "/images/bg-3.png",
-//     title: "#case_03",
-//     project: "GREEN ENERGY",
-//     description: "Corporate site / Private work",
-//     thumbnail: "/images/thum-3.png",
-//   },
-// ];
-
 export interface skilsText {
   id: number;
   title: string;
@@ -110,8 +74,8 @@ export const projects: Project[] = [
     disclaimerText: "*E-commerce site",
     leftimage: "/projects/latticelane/faceimage.png",
 
-    img: "/images/bg-1.png",
-    thumbnail: "/images/thum-1.png",
+    img: "/projects/latticelane/Hamper.jpg",
+    thumbnail: "/projects/latticelane/Hamper1.jpg",
     description: "Brand site / Client work",
 
     launchName:"Launch Site",
@@ -133,32 +97,33 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "portfolio",
+    id: "thinkPro",
     caseNumber: "#case_02",
-    title: "PORTFOLIO",
-    launchUrl: "https://example.com",
+    title: "THINK PRO",
+    launchUrl: "https://www.thinkpro.academy/",
     isFictional: false,
-    disclaimerText: "*Fictional site",
+    disclaimerText: "*Educational Website",
     leftimage: "/string",
 
     img: "/images/bg-2.png",
     thumbnail: "/images/thum-2.png",
-    description: "Portfolio site / Private work",
+    description: "Educational Website / clint work",
 
     launchName:"Launch Site",
-    areaOfResponsibility: "Design/Implementation",
-    development: "Next.js Tailwind GSAP",
-    overview: "A personal portfolio website to showcase projects and case studies.",
-    productionPeriod: "1 month",
+    areaOfResponsibility: "Developed and customized a fully responsive educational website on Wix, focusing on branding, layout design, and mobile optimization. Created dedicated pages for seasonal programs such as the Summer Camp, along with a custom registration form to collect participant data, and integrated secure payment options to streamline the registration process.",
+    development: "Wix Platform (Wix Editor, Wix Bookings)  Custom Styling & Layouts  Responsive Design & Mobile Optimization  Integrated Registration & Payment Flows",
+    overview: "ThinkPro is a modern educational platform built using Wix, designed for students and professionals to access and register for learning programs. The website emphasizes a clean, responsive layout with seamless navigation, providing an engaging user experience across all devices.",
+    productionPeriod: "Nov 2024 – Dec 2024",
     implementationDetails: [
-      { title: "UI/UX", points: ["Responsive design", "Animations"] },
-      { title: "Frontend", points: ["Next.js", "GSAP"] },
+      { title: "Branding & Layout Design", points: ["Created a professional, education-focused layout with clear navigation.", "Optimized the design for both desktop and mobile screens."] },
+      { title: "Program & Registration Setup", points: ["Built a Summer Camp program page with engaging content.", "Designed a custom registration form to securely collect participant details."] },
+      { title: "Payment Integration & User Flow", points: ["Integrated a secure payment system for online registrations.", "Streamlined the onboarding process by connecting registration with payment flow."] },
     ],
     media: [
+      { type: "image", src: "/projects/thinkpro/THINKPRO.png" },
       { type: "image", src: "/images/bg-3.png" },
       { type: "image", src: "/images/bg-3.png" },
-      { type: "image", src: "/images/bg-3.png" },
-      { type: "video", src: "/videos/demo.mp4" },
+      { type: "video", src: "/projects/thinkpro/thinkpro.mp4" },
     ],
   },
   {
@@ -170,8 +135,8 @@ export const projects: Project[] = [
     disclaimerText: "*Branding site",
     leftimage: "/projects/stree/faceimage.png",
 
-    img: "/images/bg-3.png",
-    thumbnail: "/images/thum-3.png",
+    img: "/projects/stree/BLUR.png",
+    thumbnail: "/projects/stree/IMG.png",
     description: "Corporate site / Private work",
 
     launchName:"GitHub Link",
@@ -190,6 +155,37 @@ export const projects: Project[] = [
       { type: "image", src: "/images/bg-3.png" },
       { type: "image", src: "/images/bg-3.png" },
       { type: "video", src: "/projects/stree/stree.mp4" },
+    ],
+  },
+  {
+    id: "unthink",
+    caseNumber: "#case_04",
+    title: "UNTHINK",
+    launchUrl: "https://github.com/vamsi80/stree",
+    isFictional: true,
+    disclaimerText: "*Course Selling Website",
+    leftimage: "/projects/stree/faceimage.png",
+
+    img: "/projects/stree/BLUR.png",
+    thumbnail: "/projects/stree/IMG.png",
+    description: "Course Selling Website / clint work",
+
+    launchName:"GitHub Link",
+    areaOfResponsibility: "Designed and developed a simple single-page advertising website from scratch using Next.js and Tailwind CSS, with a strong focus on responsive layouts across all devices, managing version control through GitHub and deploying seamlessly on Vercel.",
+    development: "Next.js Tailwind CSS Responsive Design Techniques GitHub (content management), Vercel (hosting)",
+    overview:
+      "The Stree Co is a lightweight, single-page advertising website built with Next.js to showcase brand offerings in a simple yet effective way. The project’s main objective was to create a clean, responsive design that works smoothly across all devices while maintaining fast performance.",
+    productionPeriod: "1 day",
+    implementationDetails: [
+      { title: "Responsive Web Design", points: ["Applied responsive techniques to ensure compatibility across mobile, tablet, and desktop.", "Designed flexible layouts to adjust content without breaking visual hierarchy."] },
+      { title: "From Scratch Development", points: ["Built the entire project from the ground up using Next.js.", "Maintained version control and collaboration through GitHub."] },
+      { title: "Deployment & Hosting", points: ["Published the project seamlessly on Vercel, enabling fast and reliable performance.", "Integrated smooth workflows from development to production."] },
+    ],
+    media: [
+      { type: "image", src: "/projects/unthink/UNTHINK.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "video", src: "/projects/unthink/unthink.mp4" },
     ],
   },
 ];
@@ -304,7 +300,7 @@ export const aboutSections: AboutSection[] = [
         title: "Databases",
         skills: ["NoSQL", "Firebase (Database & Auth)", "PostgreSQL"],
         description: [
-          "I work with both SQL and NoSQL databases, enabling efficient data storage, retrieval, and integration into scalable applications.",
+          "I work with both SQL and NoSQL databases to create efficient and reliable data solutions. My experience includes relational databases such as MySQL and PostgreSQL, along with NoSQL platforms like Firebase. I focus on designing optimized schemas, improving query performance, and ensuring secure data handling.",
         ],
       },
       {
@@ -312,7 +308,7 @@ export const aboutSections: AboutSection[] = [
         title: "Tools",
         skills: ["GitHub", "Vercel", "Illustrator", "Figma", "BrightSign"],
         description: [
-          "I use tools that support efficient collaboration, deployment, and design workflows—helping me deliver production-ready solutions seamlessly.",
+          "I work with tools like GitHub for collaboration, Vercel for seamless deployment, and Figma/Illustrator for creative design. I also use BrightSign to deliver engaging digital signage solutions, helping me bring ideas to life efficiently and beautifully.",
         ],
       },
     ],
