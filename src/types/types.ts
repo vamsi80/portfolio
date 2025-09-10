@@ -105,8 +105,8 @@ export const projects: Project[] = [
     disclaimerText: "*Educational Website",
     leftimage: "/string",
 
-    img: "/images/bg-2.png",
-    thumbnail: "/images/thum-2.png",
+    img: "/projects/thinkpro/BLUR.jpg",
+    thumbnail: "/projects/thinkpro/sqare.jpg",
     description: "Educational Website / clint work",
 
     launchName:"Launch Site",
