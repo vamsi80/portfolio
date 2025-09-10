@@ -76,7 +76,7 @@ export const projects: Project[] = [
 
     img: "/projects/latticelane/Hamper.jpg",
     thumbnail: "/projects/latticelane/Hamper1.jpg",
-    description: "Brand site / Client work",
+    description: "E-commerce / Client work",
 
     launchName:"Launch Site",
     areaOfResponsibility: "Led the end-to-end development of the e-commerce platform on Shopify, designing and implementing custom layouts tailored to the brand’s requirements.",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
 
     img: "/projects/stree/BLUR.png",
     thumbnail: "/projects/stree/IMG.png",
-    description: "Corporate site / Private work",
+    description: "Branding / Clint work",
 
     launchName:"GitHub Link",
     areaOfResponsibility: "Designed and developed a simple single-page advertising website from scratch using Next.js and Tailwind CSS, with a strong focus on responsive layouts across all devices, managing version control through GitHub and deploying seamlessly on Vercel.",
