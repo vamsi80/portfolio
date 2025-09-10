@@ -103,7 +103,7 @@ export const projects: Project[] = [
     launchUrl: "https://www.thinkpro.academy/",
     isFictional: false,
     disclaimerText: "*Educational Website",
-    leftimage: "/string",
+    leftimage: "/projects/thinkpro/faceimage.png",
 
     img: "/projects/thinkpro/BLUR.jpg",
     thumbnail: "/projects/thinkpro/sqare.jpg",
@@ -164,10 +164,10 @@ export const projects: Project[] = [
     launchUrl: "https://github.com/vamsi80/stree",
     isFictional: true,
     disclaimerText: "*Course Selling Website",
-    leftimage: "/projects/stree/faceimage.png",
+    leftimage: "/projects/unthink/faceimage.png",
 
-    img: "/projects/stree/BLUR.png",
-    thumbnail: "/projects/stree/IMG.png",
+    img: "/projects/unthink/BLUR.png",
+    thumbnail: "/projects/unthink/IMG.png",
     description: "Course Selling Website / clint work",
 
     launchName:"GitHub Link",
