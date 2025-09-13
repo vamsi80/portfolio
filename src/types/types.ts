@@ -170,16 +170,16 @@ export const projects: Project[] = [
     thumbnail: "/projects/unthink/IMG.png",
     description: "Course Selling Website / clint work",
 
-    launchName:"GitHub Link",
-    areaOfResponsibility: "Designed and developed a simple single-page advertising website from scratch using Next.js and Tailwind CSS, with a strong focus on responsive layouts across all devices, managing version control through GitHub and deploying seamlessly on Vercel.",
-    development: "Next.js Tailwind CSS Responsive Design Techniques GitHub (content management), Vercel (hosting)",
+    launchName:"Live",
+    areaOfResponsibility: "Designed and developed a professional course-selling platform for a US-based client using Wix, with a focus on creating a modern and responsive user interface. Implemented a custom booking system and integrated secure payment options, ensuring a seamless process for users to explore, book, and enroll in courses.",
+    development: "Wix Platform (Wix Editor, Wix Bookings)  Payment Gateway Integration  Custom UI/UX Design Responsive Web Design",
     overview:
-      "The Stree Co is a lightweight, single-page advertising website built with Next.js to showcase brand offerings in a simple yet effective way. The project’s main objective was to create a clean, responsive design that works smoothly across all devices while maintaining fast performance.",
-    productionPeriod: "1 day",
+      "Unthink is a fully responsive educational platform built on Wix, designed to provide a smooth and engaging experience for users enrolling in courses. The website highlights a clean layout, custom booking flows, and secure payment integration, making it easy for learners to browse, register, and complete payments online.",
+    productionPeriod: "Mar 2025 – Mar 2025",
     implementationDetails: [
-      { title: "Responsive Web Design", points: ["Applied responsive techniques to ensure compatibility across mobile, tablet, and desktop.", "Designed flexible layouts to adjust content without breaking visual hierarchy."] },
-      { title: "From Scratch Development", points: ["Built the entire project from the ground up using Next.js.", "Maintained version control and collaboration through GitHub."] },
-      { title: "Deployment & Hosting", points: ["Published the project seamlessly on Vercel, enabling fast and reliable performance.", "Integrated smooth workflows from development to production."] },
+      { title: "UI/UX & Layout Design", points: ["Created a modern, visually appealing layout tailored for educational course selling.", "Ensured mobile-first responsiveness for accessibility across all devices."] },
+      { title: "Booking System Setup", points: ["Developed a custom booking workflow to streamline course enrollment.", "Enabled scheduling and confirmation features for users."] },
+      { title: "Payment Integration", points: ["Integrated a secure payment system for seamless transactions.", "Optimized the flow from course booking to payment confirmation."] },
     ],
     media: [
       { type: "image", src: "/projects/unthink/UNTHINK.png" },
