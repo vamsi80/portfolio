@@ -43,7 +43,7 @@ export interface Project {
   id: string;              // unique id for params
   caseNumber: string;
   title: string;
-  // project: string;
+  // project: string;-
   isFictional?: boolean;
   disclaimerText:string;
   launchUrl: string;
@@ -127,8 +127,39 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "stree",
+    id: "unthink",
     caseNumber: "#case_03",
+    title: "UNTHINK",
+    launchUrl: "https://github.com/vamsi80/stree",
+    isFictional: true,
+    disclaimerText: "*Course Selling Website",
+    leftimage: "/projects/unthink/faceimage.png",
+
+    img: "/projects/unthink/BLUR.png",
+    thumbnail: "/projects/unthink/squar.avif",
+    description: "Course Selling Website / clint work",
+
+    launchName:"Live",
+    areaOfResponsibility: "Designed and developed a professional course-selling platform for a US-based client using Wix, with a focus on creating a modern and responsive user interface. Implemented a custom booking system and integrated secure payment options, ensuring a seamless process for users to explore, book, and enroll in courses.",
+    development: "Wix Platform (Wix Editor, Wix Bookings)  Payment Gateway Integration  Custom UI/UX Design Responsive Web Design",
+    overview:
+      "Unthink is a fully responsive educational platform built on Wix, designed to provide a smooth and engaging experience for users enrolling in courses. The website highlights a clean layout, custom booking flows, and secure payment integration, making it easy for learners to browse, register, and complete payments online.",
+    productionPeriod: "Mar 2025 – Mar 2025",
+    implementationDetails: [
+      { title: "UI/UX & Layout Design", points: ["Created a modern, visually appealing layout tailored for educational course selling.", "Ensured mobile-first responsiveness for accessibility across all devices."] },
+      { title: "Booking System Setup", points: ["Developed a custom booking workflow to streamline course enrollment.", "Enabled scheduling and confirmation features for users."] },
+      { title: "Payment Integration", points: ["Integrated a secure payment system for seamless transactions.", "Optimized the flow from course booking to payment confirmation."] },
+    ],
+    media: [
+      { type: "image", src: "/projects/unthink/UNTHINK.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "image", src: "/images/bg-3.png" },
+      { type: "video", src: "/projects/unthink/unthink.mp4" },
+    ],
+  },
+  {
+    id: "stree",
+    caseNumber: "#case_04",
     title: "THE STREE",
     launchUrl: "https://github.com/vamsi80/stree",
     isFictional: true,
@@ -155,37 +186,6 @@ export const projects: Project[] = [
       { type: "image", src: "/images/bg-3.png" },
       { type: "image", src: "/images/bg-3.png" },
       { type: "video", src: "/projects/stree/stree.mp4" },
-    ],
-  },
-  {
-    id: "unthink",
-    caseNumber: "#case_04",
-    title: "UNTHINK",
-    launchUrl: "https://github.com/vamsi80/stree",
-    isFictional: true,
-    disclaimerText: "*Course Selling Website",
-    leftimage: "/projects/unthink/faceimage.png",
-
-    img: "/projects/unthink/BLUR.png",
-    thumbnail: "/projects/unthink/IMG.png",
-    description: "Course Selling Website / clint work",
-
-    launchName:"Live",
-    areaOfResponsibility: "Designed and developed a professional course-selling platform for a US-based client using Wix, with a focus on creating a modern and responsive user interface. Implemented a custom booking system and integrated secure payment options, ensuring a seamless process for users to explore, book, and enroll in courses.",
-    development: "Wix Platform (Wix Editor, Wix Bookings)  Payment Gateway Integration  Custom UI/UX Design Responsive Web Design",
-    overview:
-      "Unthink is a fully responsive educational platform built on Wix, designed to provide a smooth and engaging experience for users enrolling in courses. The website highlights a clean layout, custom booking flows, and secure payment integration, making it easy for learners to browse, register, and complete payments online.",
-    productionPeriod: "Mar 2025 – Mar 2025",
-    implementationDetails: [
-      { title: "UI/UX & Layout Design", points: ["Created a modern, visually appealing layout tailored for educational course selling.", "Ensured mobile-first responsiveness for accessibility across all devices."] },
-      { title: "Booking System Setup", points: ["Developed a custom booking workflow to streamline course enrollment.", "Enabled scheduling and confirmation features for users."] },
-      { title: "Payment Integration", points: ["Integrated a secure payment system for seamless transactions.", "Optimized the flow from course booking to payment confirmation."] },
-    ],
-    media: [
-      { type: "image", src: "/projects/unthink/UNTHINK.png" },
-      { type: "image", src: "/images/bg-3.png" },
-      { type: "image", src: "/images/bg-3.png" },
-      { type: "video", src: "/projects/unthink/unthink.mp4" },
     ],
   },
 ];
@@ -298,7 +298,7 @@ export const aboutSections: AboutSection[] = [
       {
         id: 5,
         title: "Databases",
-        skills: ["NoSQL", "Firebase (Database & Auth)", "PostgreSQL"],
+        skills: ["NoSQL", "Firebase (Database & Auth)"],
         description: [
           "I work with both SQL and NoSQL databases to create efficient and reliable data solutions. My experience includes relational databases such as MySQL and PostgreSQL, along with NoSQL platforms like Firebase. I focus on designing optimized schemas, improving query performance, and ensuring secure data handling.",
         ],
